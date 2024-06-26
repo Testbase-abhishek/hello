@@ -1,11 +1,9 @@
 name: Trigger Actions in Other Repositories
-
 on: 
     workflow_run:
         workflows: ["Deploy to AWS ECS"]
         types:
           - completed
-
 jobs:
   trigger-other-repos:
     runs-on: ubuntu-latest
